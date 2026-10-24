@@ -1,1 +1,287 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students Donate | Education Through Giving</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Bar -->
+<header class="navbar">
+    <a href="#" class="logo">
+        <span class="logo-icon">S</span>
+        Students<span>Donate</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+    </button>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#students">Students</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About Us</a>
+        <a href="#request-help" class="nav-button">Request Help</a>
+    </nav>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="eyebrow">TOGETHER, WE CAN MAKE A DIFFERENCE</p>
+        <h1>
+            Your Education
+            <span>Shouldn't Stop</span>
+            Because of Money.
+        </h1>
+        <p class="hero-description">
+            Students Donate connects students who need help paying
+            their school fees with people who are willing to support
+            their educational journey.
+        </p>
+        <div class="hero-buttons">
+            <a href="#students" class="btn btn-primary">
+                Support a Student
+            </a>
+            <a href="#request-help" class="btn btn-outline">
+                I Need Help
+            </a>
+        </div>
+        <div class="hero-note">
+            Every contribution brings someone closer to graduation.
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="hero-card-icon">🎓</div>
+        <p class="small-label">YOUR SUPPORT MATTERS</p>
+        <h2>One Student.</h2>
+        <h2>One Opportunity.</h2>
+        <h2 class="blue-text">A Brighter Future.</h2>
+        <p>
+            Help a student stay in school and keep their dreams alive.
+        </p>
+        <a href="#students" class="text-link">
+            Explore students →
+        </a>
+    </div>
+</section>
+<!-- Statistics Section -->
+<section class="stats-section">
+    <div class="stat-box">
+        <h2 id="studentCount">3</h2>
+        <p>Students Featured</p>
+    </div>
+    <div class="stat-box">
+        <h2 id="donationCount">0</h2>
+        <p>Demo Donations</p>
+    </div>
+    <div class="stat-box">
+        <h2 id="amountRaised">₦0</h2>
+        <p>Demo Amount Pledged</p>
+    </div>
+</section>
+<!-- Students Section -->
+<section class="students-section" id="students">
+    <div class="section-heading">
+        <p class="eyebrow">MAKE A DIFFERENCE</p>
+        <h2>Students Who Need Your Support</h2>
+        <p>
+            Discover student stories and help them take another
+            step towards achieving their academic goals.
+        </p>
+    </div>
+    <!-- Search -->
+    <div class="search-container">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by name, course or institution..."
+            aria-label="Search students"
+        >
+        <button id="searchButton" class="btn btn-primary">
+            Search
+        </button>
+    </div>
+    <!-- Student Cards Are Created With JavaScript -->
+    <div class="student-grid" id="studentGrid"></div>
+    <p id="emptyMessage" class="empty-message" hidden>
+        No students match your search.
+    </p>
+</section>
+<!-- How It Works -->
+<section class="how-section" id="how-it-works">
+    <div class="section-heading">
+        <p class="eyebrow">SIMPLE AND MEANINGFUL</p>
+        <h2>How Students Donate Works</h2>
+        <p>
+            A simple way to connect generosity with educational needs.
+        </p>
+    </div>
+    <div class="steps-grid">
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <h3>Students Request Help</h3>
+            <p>
+                Students submit their details, explain their needs
+                and provide the amount required for their school fees.
+            </p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <h3>Supporters Choose</h3>
+            <p>
+                Donors explore student requests and choose whom
+                they would like to support.
+            </p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <h3>Education Continues</h3>
+            <p>
+                Contributions help students meet their educational
+                expenses and continue their studies.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Request Help Section -->
+<section class="request-section" id="request-help">
+    <div class="request-content">
+        <p class="eyebrow">YOUR FUTURE STILL MATTERS</p>
+        <h2>Are School Fees Standing in Your Way?</h2>
+        <p>
+            You deserve the opportunity to pursue your education.
+            Tell us about your situation and create a request for support.
+        </p>
+        <ul class="benefits-list">
+            <li>✓ Explain your financial needs</li>
+            <li>✓ Share your educational goals</li>
+            <li>✓ Connect with potential supporters</li>
+        </ul>
+    </div>
+    <form id="helpForm" class="help-form">
+        <h3>Request Financial Assistance</h3>
+        <label for="studentName">Full Name</label>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your full name"
+            required
+        >
+        <label for="institution">Institution</label>
+        <input
+            type="text"
+            id="institution"
+            placeholder="Name of your university"
+            required
+        >
+        <label for="course">Course of Study</label>
+        <input
+            type="text"
+            id="course"
+            placeholder="e.g. Biochemistry"
+            required
+        >
+        <label for="feeAmount">Amount Needed (₦)</label>
+        <input
+            type="number"
+            id="feeAmount"
+            placeholder="e.g. 150000"
+            min="1"
+            step="1"
+            required
+        >
+        <label for="studentStory">Tell Us Your Story</label>
+        <textarea
+            id="studentStory"
+            rows="4"
+            maxlength="1000"
+            placeholder="Explain why you need assistance..."
+            required
+        ></textarea>
+        <button type="submit" class="btn btn-primary full-width">
+            Submit Request
+        </button>
+        <p class="form-note">
+            Prototype only. Your submission will not be sent to a server.
+        </p>
+    </form>
+</section>
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="about-icon">💙</div>
+    <div>
+        <p class="eyebrow">OUR MISSION</p>
+        <h2>Education Is Better When We Help Each Other.</h2>
+        <p>
+            Students Donate is built on the belief that financial
+            difficulties should not prevent talented and hardworking
+            students from pursuing their dreams. By connecting
+            students in need with willing supporters, we can build
+            a community where education receives the support it deserves.
+        </p>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <a href="#home" class="logo footer-logo">
+        <span class="logo-icon">S</span>
+        Students<span>Donate</span>
+    </a>
+    <p>Supporting students. Strengthening futures.</p>
+    <p class="copyright">
+        &copy; <span id="currentYear"></span> Students Donate.
+        All rights reserved.
+    </p>
+    <p class="disclaimer">
+        Student profiles and donation figures on this prototype
+        are sample data, not verified real-world requests.
+    </p>
+</footer>
+<!-- Donation Modal -->
+<div class="modal" id="donationModal" hidden>
+    <div class="modal-content">
+        <button
+            type="button"
+            class="modal-close"
+            id="closeModal"
+            aria-label="Close donation form"
+        >&times;</button>
+        <p class="eyebrow">MAKE A DIFFERENCE</p>
+        <h2>Support <span id="donationStudentName">a Student</span></h2>
+        <p>
+            Choose an amount you would like to pledge towards
+            this student's educational expenses.
+        </p>
+        <form id="donationForm">
+            <label for="donorName">Your Name (Optional)</label>
+            <input
+                type="text"
+                id="donorName"
+                placeholder="Enter your name"
+            >
+            <label for="donationAmount">Donation Amount (₦)</label>
+            <input
+                type="number"
+                id="donationAmount"
+                min="1"
+                step="1"
+                placeholder="e.g. 5000"
+                required
+            >
+            <button type="submit" class="btn btn-primary full-width">
+                Record Demo Pledge
+            </button>
+            <p class="form-note">
+                This demo does not transfer money.
+            </p>
+        </form>
+        <p id="donationMessage" class="success-message" role="status"></p>
+    </div>
+</div>
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
